@@ -109,41 +109,38 @@ function hideAllSections() {
   
   // Function to fix the heart and show small hearts
   function fixHeart() {
-    // Get the heart container
-    var heartContainer = document.getElementById('heart-container');
-  
-    // Hide the broken heart
-    document.getElementById('broken-heart').style.display = 'none';
-  
-    // Show the fixed heart
-    document.getElementById('fixed-heart').style.display = 'block';
-  
-    // Create small hearts and add them to the container
-    createSmallHearts();
-  
-    // Disable the button after accepting the apology
-    document.getElementById('acceptButton').disabled = true;
-  }
+  document.getElementById('broken-heart').style.display = 'none';
+  document.getElementById('fixed-heart').style.display = 'block';
+
+  const interval = setInterval(createSmallHearts, 500);
+
+  document.getElementById('acceptButton').disabled = true;
+
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 10000); // hearts for 10 seconds
+}
   
   function createSmallHearts() {
-    var smallHeartsContainer = document.getElementById('small-hearts-container');
-    for (var i = 0; i < 20; i++) {
-      var smallHeart = document.createElement('div');
-      smallHeart.className = 'small-heart';
-      smallHeartsContainer.appendChild(smallHeart);
-      animateSmallHeart(smallHeart);
-    }
+  for (let i = 0; i < 30; i++) {
+    const heart = document.createElement("div");
+
+    heart.className = "small-heart";
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * window.innerWidth + "px";
+
+    const duration = Math.random() * 3 + 3;
+    heart.style.animationDuration = duration + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, duration * 1000);
   }
+}
   
-  function animateSmallHeart(smallHeart) {
-    var animationDuration = Math.random() * 2 + 4;
-    var startPositionX = Math.random() * 100;
-    smallHeart.style.animation = `rise ${animationDuration}s linear`;
-    smallHeart.style.left = `${startPositionX}vw`;
-    setTimeout(function() {
-      smallHeart.remove();
-    }, animationDuration * 1000);
-  }
   
   
   // for muisic
