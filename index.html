@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>for my sweet littul girl</title>
+</head>
+
+<body>
+  <header>
+    <h1>apology and cheer up site for u with a video of all animals that are basically us</h1>
+  </header>
+
+  <section id="intro-section">
+    <p>for my sweet littul girl</p>
+  </section>
+
+  <nav>
+    <ul>
+      <li><a href="#" id="apology-link">Apology</a></li>
+      <li><a href="#" onclick="showVideo()">see video of us</a></li>
+    </ul>
+  </nav>
+
+  <section id="apology-section" class="section">
+    <h2>Apology</h2>
+
+    <p>Riddhzu</p>
+
+    <p>Sorry u felt like i can't see that u're sad so I was able to see ure sad i just didnt know how to make u feel better i felt like u were in a bad mood and u not answering what happened meant that u dont wanna talk about it so i started stupid stuff like can i just look at u.</p>
+
+    <p>I get that u dont wanna talk about it at this moment but when u do im all locked in to listen to u and if i cant do anything to make u feel better then i'll just sit with u till u do because i wanna be there for u and w u love u loads baby</p>
+
+    <p>this is one of the ways i could think of to show u i care about u which im sure u dont doubt(hopefully) but i want to reemphasize</p>
+
+    <div id="heart-container" style="text-align: center;">
+      <img id="broken-heart"
+        src="https://e7.pngegg.com/pngimages/429/825/png-clipart-red-heart-illustration-broken-heart-love-cartoon-broken-heart-heart-fictional-character-thumbnail.png"
+        alt="Broken Heart">
+      <img id="fixed-heart" src="https://pngfre.com/wp-content/uploads/heart-87-1024x849.png" height="400px"
+        width="400px" alt="Fixed Heart">
+      <div id="small-hearts-container"></div>
+    </div>
+    <button id="acceptButton" onclick="fixHeart()"
+      style="background-color: #f08080; color: white; font-size: 1.5em; padding: 10px 20px; border: none; border-radius: 5px;">
+      Click To Accept Apology</button>
+  </section>
+
+  <div>
+    <audio id="backgroundMusic" loop>
+      <source src="new/Tose-Naina-Jab-Se-Mile.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <button id="audio-controls" onclick="toggleAudio()">Click Here to listen to this song i see u as</button>
+  </div>
+
+  <div id="video-container" style="display: none;">
+    <video id="myVideo" width="1500" height="800" controls>
+      <source src="new/1477825-people-nature-3840x2160_2fQDRJUK.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="playPauseBtn" onclick="togglePlayPause()">Play</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
